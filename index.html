@@ -1,14 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-  <title>IDPA KI-Nutzung</title>
+  <meta charset="UTF-8">
+  <title>IDPA – KI-Nutzung in technischen Bildungsgängen</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1f2933;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    button {
+      padding: 12px 18px;
+      margin: 8px;
+      border: none;
+      border-radius: 6px;
+      background-color: #2563eb;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #1e40af;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Willkommen zu unserer IDPA</h1>
-  <p>Diese Website zeigt unsere Ergebnisse zur KI-Nutzung.</p>
+
+<header>
+  <h1>IDPA – Nutzung von Künstlicher Intelligenz</h1>
+  <p>Interaktive Website zu unserer Untersuchung in technischen Bildungsgängen</p>
+</header>
+
+<main>
+
+  <!-- Kachel: Einstieg -->
+  <div class="card">
+    <h2>Was glaubst du?</h2>
+    <p>
+      In welchem Bildungsgang wird Künstliche Intelligenz im Schulalltag
+      am häufigsten genutzt?
+    </p>
+
+    <button onclick="showResult('Berufsschule')">Berufsschule</button>
+    <button onclick="showResult('BMS')">Berufsmaturität (BMS)</button>
+    <button onclick="showResult('Technische Maturität')">Technische Maturität</button>
+
+    <div id="result"></div>
+  </div>
+
+  <!-- Kachel: Worum geht es -->
+  <div class="card">
+    <h2>Worum geht es in dieser Arbeit?</h2>
+    <p>
+      In unserer IDPA untersuchen wir, wie Lernende und Lehrpersonen
+      in verschiedenen <strong>technischen Bildungsgängen</strong>
+      Künstliche Intelligenz nutzen, bewerten und im Unterricht einsetzen.
+    </p>
+  </div>
+
+  <!-- Kachel: Navigation -->
+  <div class="card">
+    <h2>Was erwartet dich?</h2>
+    <ul>
+      <li>📊 Interaktive Umfrage-Ergebnisse</li>
+      <li>🔄 Vergleich der Bildungsgänge</li>
+      <li>👩‍🏫 Lernende vs. Lehrpersonen</li>
+      <li>📚 Vergleich mit bestehenden Studien</li>
+    </ul>
+  </div>
+
+</main>
+
+<script>
+  function showResult(answer) {
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+
+    resultDiv.innerHTML =
+      "Du hast <u>" + answer + "</u> gewählt.<br><br>" +
+      "Viele Personen schätzen dies ähnlich ein. " +
+      "Ob diese Einschätzung stimmt, zeigen wir dir " +
+      "auf den nächsten Seiten anhand unserer Umfrage-Daten.";
+  }
+</script>
+
 </body>
 </html>
-
-<button onclick="alert('Überraschung!')">
-  Ergebnis anzeigen
-</button>
